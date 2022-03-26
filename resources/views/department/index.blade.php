@@ -12,7 +12,8 @@
                             <h3>Administración de departamentos</h3>
                             <div class="col-md-10 mx-auto bg-white p-3">
                                 <table class="table">
-                                    <thead class="bg-primary text-light">
+                                    <thead class="text-light"
+                                    style="background-color: #140f07!important;">
                                         <tr>
                                             <th scole="col">Código</th>
                                             <th scole="col">Nombre del departamento</th>

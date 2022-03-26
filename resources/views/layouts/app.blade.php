@@ -39,19 +39,19 @@
                     {{ config('app.name', 'Laravel') }}
 
                 </a>
-                <a class=" text-warning  {{request()->routeIs('user.index') ? 'fw-bold':''}}" href="{{ route('user.index') }}" >
+                <a class="mx-2 text-warning  {{request()->routeIs('user.index') ? 'fw-bold':''}}" href="{{ route('user.index') }}" >
                     Usuarios
                 </a>
-                <a class=" text-warning {{request()->routeIs('status.index') ? 'fw-bold':''}}" href="{{ route('status.index') }}" >
+                <a class="mx-2 text-warning {{request()->routeIs('status.index') ? 'fw-bold':''}}" href="{{ route('status.index') }}" >
                     Estados
                 </a>
-                <a class=" text-warning {{request()->routeIs('department.index') ? 'fw-bold':''}}" href="{{ route('department.index') }}" >
+                <a class="mx-2 text-warning {{request()->routeIs('department.index') ? 'fw-bold':''}}" href="{{ route('department.index') }}" >
                     Departamentos
                 </a>
-                <a class=" text-warning {{request()->routeIs('tag.index') ? 'fw-bold':''}}" href="{{ route('tag.index') }}" >
+                <a class="mx-2 text-warning {{request()->routeIs('tag.index') ? 'fw-bold':''}}" href="{{ route('tag.index') }}" >
                     Etiquetas
                 </a>
-                <a class=" text-warning {{request()->routeIs('investigation.index') ? 'fw-bold':''}}" href="{{ route('investigation.index') }}" >
+                <a class="mx-2 text-warning {{request()->routeIs('investigation.index') ? 'fw-bold':''}}" href="{{ route('investigation.index') }}" >
                     Investigaciones
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

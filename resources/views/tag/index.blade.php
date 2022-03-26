@@ -10,7 +10,8 @@
                     <div class="card-body">
                         <div>
                             <h3>Administración de etiquetas</h3>
-                            <div class="col-md-10 mx-auto bg-white p-3">
+                            <div class="col-md-10 mx-auto bg-white p-3"
+                            style="background-color: #140f07!important;">
                                 <table class="table">
                                     <thead class="bg-primary text-light">
                                         <tr>
