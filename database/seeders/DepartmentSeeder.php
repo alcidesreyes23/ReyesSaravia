@@ -20,5 +20,20 @@ class DepartmentSeeder extends Seeder
             'department_name' => 'Sistemas',
             'department_position' => 'Asistente técnico',
         ]);
+
+        Department::create([
+            'department_name' => 'Finanzas',
+            'department_position' => 'Contador',
+        ]);
+
+        Department::create([
+            'department_name' => 'Recursos Humanos',
+            'department_position' => 'Reclutamiento',
+        ]);
+
+        Department::create([
+            'department_name' => 'Vigilancia',
+            'department_position' => 'Vigilante',
+        ]);
     }
 }
