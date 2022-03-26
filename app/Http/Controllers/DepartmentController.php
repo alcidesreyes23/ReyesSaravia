@@ -14,7 +14,24 @@ class DepartmentController extends Controller
      */
     public function index()
     {
-        //
+        $departments = [
+            [
+                'id' => 1,
+                'department_name' => 'Sistemas',
+                'department_positon' => 'Diseñador web',
+            ],
+            [
+                'id' => 2,
+                'department_name' => 'Sistemas',
+                'department_positon' => 'Desarrollador web',
+            ],
+            [
+                'id' => 3,
+                'department_name' => 'RRHH',
+                'department_positon' => 'Gerente de recursos humanos',
+            ],
+        ];
+        return view('department.index',compact('departments'));
     }
 
     /**

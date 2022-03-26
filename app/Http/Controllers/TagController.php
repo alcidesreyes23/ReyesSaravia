@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Status;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 
-class StatusController extends Controller
+class TagController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,34 +14,34 @@ class StatusController extends Controller
      */
     public function index()
     {
-        $status = [
+        $tags = [
             [
                 'id' => 1,
-                'status_name' => 'No iniciado',
-                'count' => 10,
+                'tag_name' => 'Ciencia',
+                'count' => 2,
             ],
             [
                 'id' => 2,
-                'status_name' => 'Iniciado',
+                'tag_name' => 'Cultura',
+                'count' => 3,
+            ],
+            [
+                'id' => 3,
+                'tag_name' => 'Tecnología',
                 'count' => 5,
             ],
             [
                 'id' => 3,
-                'status_name' => 'Finalizado',
-                'count' => 2,
+                'tag_name' => 'Cultura',
+                'count' => 5,
+            ],
+            [
+                'id' => 3,
+                'tag_name' => 'Ocio',
+                'count' => 1,
             ],
         ];
-        return view('status.index',compact('status'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return view('tag.index',compact('tags'));
     }
 
     /**
@@ -58,21 +58,10 @@ class StatusController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Status  $status
+     * @param  \App\Models\Tag  $tag
      * @return \Illuminate\Http\Response
      */
-    public function show(Status $status)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Status  $status
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Status $status)
+    public function show(Tag $tag)
     {
         //
     }
@@ -81,10 +70,10 @@ class StatusController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Status  $status
+     * @param  \App\Models\Tag  $tag
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Status $status)
+    public function update(Request $request, Tag $tag)
     {
         //
     }
@@ -92,10 +81,10 @@ class StatusController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Status  $status
+     * @param  \App\Models\Tag  $tag
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Status $status)
+    public function destroy(Tag $tag)
     {
         //
     }
