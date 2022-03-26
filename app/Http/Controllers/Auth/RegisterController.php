@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Department;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -52,7 +53,19 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'department_name' => ['required', 'string', 'max:255'],
+            'department_position' => ['required', 'string', 'max:255'],
+            'salary' => ['required', 'numeric'],
+            'web_site' => ['required', 'url'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+        ], [], [
+            'name' => 'Nombre',
+            'email' => 'Correo electrónico',
+            'department_name' => 'Departamento',
+            'department_position' => 'Cargo',
+            'salary' => 'Salario',
+            'web_site' => 'Sitio web',
+            'password' => 'Contraseña',
         ]);
     }
 
@@ -64,10 +77,18 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $dep = Department::create([
+            'department_name'     => $data['department_name'],
+            'department_position' => $data['department_position'],
+        ]);
+
         return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'name'                => $data['name'],
+            'email'               => $data['email'],
+            'department_id'        => $dep->id,
+            'salary'              => $data['salary'],
+            'web_site'            => $data['web_site'],
+            'password'            => Hash::make($data['password']),
         ]);
     }
 }
