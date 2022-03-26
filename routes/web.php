@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InvestigationController;
 use App\Http\Controllers\StatusController;
 use App\Http\Controllers\TagController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Symfony\Component\Routing\Route as RoutingRoute;
 
@@ -42,5 +43,5 @@ Route::group(['prefix' => 'estados','as' => 'status.'], function() {
 Route::get('api/etiquetas',[TagController::class,'index'])->name('tag.index');
 
 Route::group(['prefix' => 'usuarios','as' => 'user.'], function() {
-    Route::get('/',[HomeController::class,'index'])->name('index');
+    Route::get('/',[UserController::class,'index'])->name('index');
 });
