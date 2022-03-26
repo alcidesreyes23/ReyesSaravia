@@ -11,15 +11,15 @@ style="margin: 75px auto;">
                 <div class="card-body">
                     <img src="https://kidsinchaos.com/wp-content/uploads/2019/03/security-1.png" alt=""
                                 style="
-                                width: 200px;
-                                margin: 0 15rem;">
+                                    width: 200px;
+                                    margin: 0 250px;">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
                         <div class="row mb-3">
                             {{-- <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label> --}}
 
                             <div class="col-md-10 mx-auto">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input placeholder="E-mail Address" id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -33,7 +33,7 @@ style="margin: 75px auto;">
                             {{-- <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label> --}}
 
                             <div class="col-md-10 mx-auto">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                <input placeholder="Secret Password" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
