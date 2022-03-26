@@ -26,12 +26,68 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Correo electrónico') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                 @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="department_name" class="col-md-4 col-form-label text-md-end">{{ __('Departamento') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="department_name" type="text" class="form-control @error('department_name') is-invalid @enderror" name="department_name" value="{{ old('department_name') }}" required autocomplete="department_name" autofocus>
+
+                                @error('department_name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="department_position" class="col-md-4 col-form-label text-md-end">{{ __('Cargo dentro del departamento') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="department_position" type="text" class="form-control @error('department_position') is-invalid @enderror" name="department_position" value="{{ old('department_position') }}" required autocomplete="department_position" autofocus>
+
+                                @error('department_position')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="salary" class="col-md-4 col-form-label text-md-end">{{ __('Salario') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="salary" type="text" class="form-control @error('salary') is-invalid @enderror" name="salary" value="{{ old('salary') }}" required autocomplete="salary" autofocus>
+
+                                @error('salary')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="web_site" class="col-md-4 col-form-label text-md-end">{{ __('Sitio web') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="web_site" type="url" class="form-control @error('web_site') is-invalid @enderror" name="web_site" value="{{ old('web_site') }}" required autocomplete="web_site" autofocus>
+
+                                @error('web_site')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
